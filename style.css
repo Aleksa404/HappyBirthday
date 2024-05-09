@@ -1,0 +1,137 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #d5d6c8;
+}
+.card {
+  width: 640px;
+  height: 450px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-perspective: 1200px;
+  perspective: 1200px;
+  transition: 1s;
+}
+.card:hover {
+  transform: rotate(-5deg);
+}
+.card:hover .outside {
+  transform: rotateY(-130deg);
+}
+.outside,
+.inside {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  left: 50.1%;
+}
+.inside {
+  background: linear-gradient(to right, #e7e7e7, #ffffff 30%);
+  line-height: 3;
+  padding: 0 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  left: 50%;
+}
+.outside {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  z-index: 1;
+  transform-origin: left;
+  transition: 2s;
+  cursor: pointer;
+}
+.front,
+.back {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+}
+.front {
+  background-color: #ffffff;
+}
+.back {
+  transform: rotateY(180deg);
+  background: linear-gradient(to left, #e7e7e7, #ffffff 30%);
+}
+.cake {
+  width: 100%;
+  position: absolute;
+  bottom: 30px;
+  text-align: center;
+
+
+  
+}
+.mau {
+    width: 100%;
+
+}
+.cat-image
+ {
+  max-height: 100%;
+  max-width: 100%;
+  display: block;
+  /* background-repeat: repeat; */
+  /* background-size: 60px 100px;
+  background-position: 10px 10px; */
+  /* position: relative; */
+  margin: auto;
+}
+.cat-image {
+    transform: scale(0.7);
+    top: 26px;
+  }
+
+  .inside p {
+    color: rgb(14, 68, 68);
+    margin-top: auto;
+    font-size: 23px;
+    line-height: 30px;
+  }
+
+/* heart */
+#heart {
+    position:relative;
+    width: 100px;
+    height: 90px;
+    margin-top: 10px;
+  }
+  
+  #heart::before, #heart::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 52px;
+    height: 80px;
+    border-radius: 50px 50px 0 0;
+    background: red;
+  }
+  
+  #heart::before {
+    left: 50px;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+  }
+  
+  #heart::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+  }
+
+
